@@ -1,9 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using System.ServiceModel;
+using System.Threading.Tasks;
 
 namespace Interfaces
 {
+    [ServiceContract]
     public interface IProductsService
     {
+        [OperationContract]
         Task<Product> GetProductAsync(string id);
     }
 
